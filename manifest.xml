@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
+
+<Support>
+  <!-- URL explaining how customers get support. -->
+  <Link rel="support" href="http://example.com/google/support.php" />
+  <!-- URL that is displayed to admins during the deletion process,
+  to specify policies such as data retention, how to claim accounts, etc. -->
+  <Link rel="deletion-policy" href="http://example.com/google/deletion-policy.php" />
+</Support>
+
+    <!-- Name and description pulled from message bundles -->
+    <Name>Eloqua Profiler</Name>
+    <Description>Simple Profiler gadget</Description>
+
+<Extension id="navLink" type="link">
+  <Name>Eloqua Profiler</Name>
+  <Url>https://secure.eloqua.com/pp/pp.aspx?emailAddress=</Url>
+</Extension>
+<!-- EXTRACTOR -->
+
+<Extension id="RecipientEmailExtractor" type="contextExtractor">
+  <Name>Recipient email extractor</Name>
+  <Url>google.com:RecipientEmailExtractor</Url>
+  <Param name="recipient_email" value=".*"/>
+  <Triggers ref="showProfiler"/>
+  <Scope ref="emailtoAddress"/>
+  <Scope ref="emailCC"/>
+  <Container name="mail"/>
+</Extension>
+
+<Extension id="SenderEmailExtractor" type="contextExtractor">
+  <Name>Sender Email Extractor</Name>
+  <Url>google.com:SenderEmailExtractor</Url>
+  <Param name="sender_email" value=".*"/>
+  <Triggers ref="showProfiler" />
+  <Scope ref="emailSender"/>
+  <Container name="mail"/>
+</Extension>
+
+<!-- GADGET -->
+<Extension id="showProfiler" type="gadget">
+  <Name>Eloqua Profiler</Name>
+  <Url>https://secure.eloqua.com/pp/pp.aspx?emailAddress=</Url>
+  <Container name="mail"/>
+</Extension>
+
+<!-- SCOPE -->
+
+<Scope id="emailtoAddress">
+  <Url>tag:google.com,2010:auth/contextual/extractor/TO_ADDRESS</Url>
+  <Reason>This application searches for the To field of an email</Reason>
+</Scope>
+<Scope id="emailCC">
+  <Url>tag:google.com,2010:auth/contextual/extractor/CC_EMAIL</Url>
+  <Reason>This application searches for the CC field of an email</Reason>
+</Scope>
+<Scope id="emailSender">
+   <Url>tag:google.com,2010:auth/contextual/extractor/FROM_ADDRESS</Url>
+   <Reason>This application searches for the From field of an email.</Reason>
+</Scope>
+
+</ApplicationManifest>
