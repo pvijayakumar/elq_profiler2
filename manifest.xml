@@ -1,63 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
 
-<Support>
-  <!-- URL explaining how customers get support. -->
-  <Link rel="support" href="http://example.com/google/support.php" />
-  <!-- URL that is displayed to admins during the deletion process,
-  to specify policies such as data retention, how to claim accounts, etc. -->
-  <Link rel="deletion-policy" href="http://example.com/google/deletion-policy.php" />
-</Support>
+  <!-- Support info to show in the marketplace & control panel -->
+  <Support>
+    <!-- URL for application setup as an optional redirect during the install -->
+    <Link rel="setup" href="http://example.com/google/setup.php?domain=${DOMAIN_NAME}" />
 
-    <!-- Name and description pulled from message bundles -->
-    <Name>Eloqua Profiler</Name>
-    <Description>Simple Profiler gadget</Description>
+    <!-- URL for application configuration, accessed from the app settings
+     page in the control panel -->
+    <Link rel="manage" href="http://example.com/google/admin.php?domain=${DOMAIN_NAME}" />
 
-<Extension id="navLink" type="link">
-  <Name>Eloqua Profiler</Name>
-  <Url>https://secure.eloqua.com/pp/pp.aspx?emailAddress=</Url>
-</Extension>
+    <!-- URL explaining how customers get support. -->
+    <Link rel="support" href="http://example.com/google/support.php" />
+
+    <!-- URL that is displayed to admins during the deletion process,
+     to specify policies such as data retention, how to claim accounts, etc. -->
+    <Link rel="deletion-policy" href="http://example.com/google/deletion-policy.php" />
+  </Support>
+
+  <!-- Name and description pulled from message bundles -->
+  <Name>HelloWorld</Name>
+  <Description>A simple Hello World application for testing
+  Gmail contextual gadgets</Description>
+
+  <!-- Show this link in Google's universal navigation for all users -->
+  <Extension id="navLink" type="link">
+    <Name>HelloWorld</Name>
+    <Url>http://example.com/home.php?from=google&amp;domain=${DOMAIN_NAME}</Url>
+  </Extension>
+
+  <!-- Declare our OpenID realm so our app is white listed -->
+  <Extension id="realm" type="openIdRealm">
+    <Url>http://example.com</Url>
+  </Extension>
+
 <!-- EXTRACTOR -->
 
-<Extension id="RecipientEmailExtractor" type="contextExtractor">
-  <Name>Recipient email extractor</Name>
-  <Url>google.com:RecipientEmailExtractor</Url>
-  <Param name="recipient_email" value=".*"/>
-  <Triggers ref="showProfiler"/>
-  <Scope ref="emailtoAddress"/>
-  <Scope ref="emailCC"/>
-  <Container name="mail"/>
-</Extension>
-
-<Extension id="SenderEmailExtractor" type="contextExtractor">
-  <Name>Sender Email Extractor</Name>
-  <Url>google.com:SenderEmailExtractor</Url>
-  <Param name="sender_email" value=".*"/>
-  <Triggers ref="showProfiler" />
-  <Scope ref="emailSender"/>
+<Extension id="HelloWorldExtractor" type="contextExtractor">
+  <Name>Hello World</Name>
+  <Url>google.com:HelloWorld</Url>
+  <!-- Uncomment this Param to apply a filter to the extractor's
+  default output. The example regexp below makes the match case sensitive.
+  <Param name="hello" value="H[a-z]* W[a-z]*"/> -->
+  <Triggers ref="HelloWorldGadget"/>
+  <Scope ref="emailSubject"/>
+  <Scope ref="emailBody"/>
   <Container name="mail"/>
 </Extension>
 
 <!-- GADGET -->
-<Extension id="showProfiler" type="gadget">
-  <Name>Eloqua Profiler</Name>
-  <Url>https://secure.eloqua.com/pp/pp.aspx?emailAddress=</Url>
+
+<Extension id="HelloWorldGadget" type="gadget">
+  <Name>Hello World Gmail contextual gadget</Name>
+  <Url>http://example.com/gadgets/hello_world_gadget.xml</Url>
   <Container name="mail"/>
+  <!-- Uncomment this to enable Caja. -->
+  <!-- <Param name="caja" value="enabled"/> -->
 </Extension>
 
 <!-- SCOPE -->
 
-<Scope id="emailtoAddress">
-  <Url>tag:google.com,2010:auth/contextual/extractor/TO_ADDRESS</Url>
-  <Reason>This application searches for the To field of an email</Reason>
+<Scope id="emailSubject">
+  <Url>tag:google.com,2010:auth/contextual/extractor/SUBJECT</Url>
+  <Reason>This application searches the Subject: line of each email
+  for the text "Hello World."</Reason>
 </Scope>
-<Scope id="emailCC">
-  <Url>tag:google.com,2010:auth/contextual/extractor/CC_EMAIL</Url>
-  <Reason>This application searches for the CC field of an email</Reason>
-</Scope>
-<Scope id="emailSender">
-   <Url>tag:google.com,2010:auth/contextual/extractor/FROM_ADDRESS</Url>
-   <Reason>This application searches for the From field of an email.</Reason>
+
+<Scope id="emailBody">
+  <Url>tag:google.com,2010:auth/contextual/extractor/BODY</Url>
+  <Reason>This application searches the message body of each email
+  for the text "Hello World."</Reason>
 </Scope>
 
 </ApplicationManifest>
