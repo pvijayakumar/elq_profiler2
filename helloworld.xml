@@ -54,16 +54,17 @@
           }
         }
         document.body.appendChild(matchList);
-        gadgets.window.adjustHeight(100);
+        <iframe border="0" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
+        gadgets.window.adjustHeight(800);
       </script>
     ]]>
   </Content>
-  <Content type="html" view="card">
+  <!--Content type="html" view="card">
   <![CDATA[ 
     <script type="text/javascript">
       <iframe border="0" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
       gadgets.window.adjustHeight(800);
     </script>
   ]]> 
-  </Content>
+  </Content-->
 </Module>
