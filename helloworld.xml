@@ -60,11 +60,10 @@
   </Content>
   <Content type="html" view="card">
   <![CDATA[ 
-    <div style="text-align:center"><a
-      id="Riggs" title="My Photo Album" target="_blank" 
-      href="http://picasaweb.google.com/doc.examples/ShelfBoy">
-      <img border="0" alt="Photo" src="http://doc.examples.googlepages.com/Riggsie-OP.jpg" 
-      title="Click Here."></a>
+    <div style="text-align:left"><a
+      id="EPP" title="Profiler" target="_blank">
+      <iframe border="0" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
+      </a>
     </div>
   ]]> 
   </Content>
