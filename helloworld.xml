@@ -22,11 +22,11 @@
      <Param> - specify one or more comma-separated extractor IDs in
      a param named "extractors". This line is overridden by the extractor ID
      in the manifest, but is still expected to be present. -->
-    <Require feature="google.contentmatch">
+    <!--Require feature="google.contentmatch">
       <Param name="extractors">
         google.com:HelloWorld
       </Param>
-    </Require>
+    </Require-->
 
     <Require feature="google.contentmatch">
       <Param name="extractors">
@@ -89,7 +89,7 @@
         document.body.appendChild(matchList);
         gadgets.window.adjustHeight(100);
       </script>
-      
+
   ]]> 
   </Content>
 </Module>
