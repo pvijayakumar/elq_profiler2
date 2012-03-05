@@ -30,7 +30,7 @@
 
     <Require feature="google.contentmatch">
       <Param name="extractors">
-        google.com:RecipientEmailExtractor
+        google.com:MessageIDExtractor,google.com:SenderEmailExtractor,google.com:RawSubjectExtractor,google.com:RecipientEmailExtractor
       </Param>
     </Require>
 
@@ -66,9 +66,46 @@
   </Content -->
   <Content type="html" view="card">
   <![CDATA[ 
+    <script type="text/javascript">
+      
+      var allemails;
 
+      < Fetch the array of content matches. >
+      matches = google.contentmatch.getContentMatches();
+      
+      for(var match in matches)
+      {
+        for (var key in matches[match])
+        {
+          if(key== 'sender_email')
+          {
+            allemails.push(matches[matches][key]);
+          }
+
+          if(key == 'recipient_email')
+          {
+            allemails.push(matches[matches][key]);
+          }
+        }
+      }
+
+      if(clients.length > 0)
+      {
+        $("(select id="<span class=&qout;hiddenSpellError&quot;pre=&quot;&quot;>emailList</span>" name="emailList">").appendTo("#myForm");
+      </select>
+
+        for(i-0;i)
+          {
+            $("").val(allemails[i].html(allemails[i]).appendTo("#emailList");
+          }
+          $("<input_id="<span class=&quot;hiddenSpellError&quot;pre=&quot;>&quot;>showbtn</span>" type="submit" name="submit" value="Show in Profiler" />").appendTo("#myForm");
+      }
+
+    </script>
+    
       <iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
 
   ]]> 
   </Content>
+
 </Module>
