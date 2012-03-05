@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-  <ModulePrefs title="Hello World"
-    description="Matches and echoes 'Hello World' string in emails"
-    height="20"
-    author="Sarah M and Walter Q"
-    author_email="..."
-    author_location="Mountain View, CA">
+  <ModulePrefs title="Eloqua Profiler"
+    description="What's your prospect interested in?"
+    height="600"
+    author="Pras"
+    author_email="prasanna.vijayakumar@eloqua.com"
+    author_location="Tdot">
 
     <!-- Declare feature dependencies. -->
 

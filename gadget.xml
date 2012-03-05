@@ -1,14 +1,55 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Module>
-  <ModulePrefs title="Go to Photo Album" height="250" scaling="false" />
-  <Content type="html">
-  <![CDATA[ 
-    <div style="text-align:center"><a
-      id="Riggs" title="My Photo Album" target="_blank" 
-      href="http://picasaweb.google.com/doc.examples/ShelfBoy">
-      <img border="0" alt="Photo" src="http://doc.examples.googlepages.com/Riggsie-OP.jpg" 
-      title="Click Here."></a>
-    </div>
-  ]]> 
+  <ModulePrefs title="Eloqua Profiler"
+    description="Visualizes DBL"
+    height="20"
+    author="Pras"
+    author_email="..."
+    author_location="Toronto">
+
+    <!-- Declare feature dependencies. -->
+
+    <!-- This one is not specific to Gmail contextual gadgets. -->
+    <Require feature="dynamic-height"/>
+    <!-- The next feature, google.contentmatch, is required for all
+     Gmail contextual gadgets.
+     <Param> - specify one or more comma-separated extractor IDs in
+     a param named "extractors". This line is overridden by the extractor ID
+     in the manifest, but is still expected to be present. -->
+    <Require feature="google.contentmatch">
+      <Param name="RecipientEmailExtractor">
+        google.com:HelloWorld
+      </Param>
+    </Require>
+
+  </ModulePrefs>
+
+  <!-- Define the content type and display location. The settings
+   "html" and "card" are required for all Gmail contextual gadgets. -->
+  <Content type="html" view="card">
+    <![CDATA[
+      <!-- Start with Single Sign-On -->
+      <script type="text/javascript" src="http://example.com/gadgets/sso.js"></script>
+      <script type="text/javascript">
+
+        <!-- Fetch the array of content matches. -->
+        matches = google.contentmatch.getContentMatches();
+        var matchList = document.createElement('UL');
+        var listItem;
+        var extractedText;
+
+        <!-- Iterate through the array and display output for each match. -->
+        for (var match in matches) {
+          for (var key in matches[match]) {
+            listItem = document.createElement('LI');
+            extractedText = document.createTextNode(key + ": " + matches[match][key]);
+            listItem.appendChild(extractedText);
+            matchList.appendChild(listItem);
+          }
+        }
+        document.body.appendChild(matchList);
+        gadgets.window.adjustHeight(100);
+      </script>
+    ]]>
   </Content>
 </Module>
