@@ -24,17 +24,17 @@
 
 <!-- EXTRACTOR -->
 
-<Extension id="HelloWorldExtractor" type="contextExtractor">
+<!--Extension id="HelloWorldExtractor" type="contextExtractor">
   <Name>Hello World</Name>
   <Url>google.com:HelloWorld</Url>
-  <!-- Uncomment this Param to apply a filter to the extractor's
+  < Uncomment this Param to apply a filter to the extractor's
   default output. The example regexp below makes the match case sensitive.
-  <Param name="hello" value="H[a-z]* W[a-z]*"/> -->
+  <Param name="hello" value="H[a-z]* W[a-z]*"/> >
   <Triggers ref="HelloWorldGadget"/>
   <Scope ref="emailSubject"/>
   <Scope ref="emailBody"/>
   <Container name="mail"/>
-</Extension>
+</Extension-->
 
 <Extension id="RecipientEmailExtractor" type="contextExtractor">
   <Name>Recipient email extractor</Name>

@@ -68,7 +68,28 @@
   <![CDATA[ 
 
       <iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
+      
+      <script type="text/javascript">
 
+        < Fetch the array of content matches. >
+        matches = google.contentmatch.getContentMatches();
+        var matchList = document.createElement('UL');
+        var listItem;
+        var extractedText;
+
+        < Iterate through the array and display output for each match. >
+        for (var match in matches) {
+          for (var key in matches[match]) {
+            listItem = document.createElement('LI');
+            extractedText = document.createTextNode(key + "> " + matches[match][key]);
+            listItem.appendChild(extractedText);
+            matchList.appendChild(listItem);
+          }
+        }
+        document.body.appendChild(matchList);
+        gadgets.window.adjustHeight(100);
+      </script>
+      
   ]]> 
   </Content>
 </Module>
