@@ -36,6 +36,16 @@
   <Container name="mail"/>
 </Extension>
 
+<Extension id="RecipientEmailExtractor" type="contextExtractor">
+  <Name>Recipient email extractor</Name>
+  <Url>google.com:RecipientEmailExtractor</Url>
+  <Param name="recipient_email" value=".*"/>
+  <Triggers ref="HelloWorldGadget"/>
+  <Scope ref="emailtoAddress"/>
+  <Scope ref="emailCC"/>
+  <Container name="mail"/>
+</Extension>
+
 <!-- GADGET -->
 
 <Extension id="HelloWorldGadget" type="gadget">
@@ -58,6 +68,21 @@
   <Url>tag:google.com,2010:auth/contextual/extractor/BODY</Url>
   <Reason>This application searches the message body of each email
   for the text "Hello World."</Reason>
+</Scope>
+
+<Scope id="emailtoAddress">
+  <Url>tag:google.com,2010:auth/contextual/extractor/TO_ADDRESS</Url>
+  <Reason>This application searches for the To field of an email</Reason>
+</Scope>
+
+<Scope id="emailCC">
+  <Url>tag:google.com,2010:auth/contextual/extractor/CC_EMAIL</Url>
+  <Reason>This application searches for the CC field of an email</Reason>
+</Scope>
+
+<Scope id="emailSender">
+   <Url>tag:google.com,2010:auth/contextual/extractor/FROM_ADDRESS</Url>
+   <Reason>This application searches for the From field of an email.</Reason>
 </Scope>
 
 </ApplicationManifest>
