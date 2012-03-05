@@ -28,6 +28,12 @@
       </Param>
     </Require>
 
+    <Require feature="google.contentmatch">
+      <Param name="extractors">
+        google.com:RecipientEmailExtractor
+      </Param>
+    </Require>
+
   </ModulePrefs>
 
   <!-- Define the content type and display location. The settings
