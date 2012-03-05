@@ -95,7 +95,7 @@ src</span>="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" typ
 
       if(allemails.length > 0)
       {
-        $("(select id="<span class=&qout;hiddenSpellError&quot;pre=&quot;&quot;>emailList</span>" name="emailList">").appendTo("#myForm");
+        $("<select id="<span class=&qout;hiddenSpellError&quot;pre=&quot;&quot;>emailList</span>" name="emailList">").appendTo("#myForm");
       </select>
 
         for(i-0;i)
