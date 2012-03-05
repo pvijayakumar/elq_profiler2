@@ -46,6 +46,15 @@
   <Container name="mail"/>
 </Extension>
 
+<Extension id="SenderEmailExtractor" type="contextExtractor">
+  <Name>Sender Email Extractor</Name>
+  <Url>google.com:SenderEmailExtractor</Url>
+  <Param name="sender_email" value=".*"/>
+  <Triggers ref="showProfiler" />
+  <Scope ref="emailSender"/>
+  <Container name="mail"/>
+</Extension>
+
 <!-- GADGET -->
 
 <Extension id="HelloWorldGadget" type="gadget">
