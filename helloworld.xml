@@ -95,7 +95,7 @@ src</span>="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" typ
 
       if(allemails.length > 0)
       {
-        $(<"select id="<span class=&quot;hiddenSpellError&quot; pre=&quot;&quot;>emailList</span>" name="emailList">").appendTo("#myForm");</select>
+        $("<select id="<span class=&quot;hiddenSpellError&quot; pre=&quot;&quot;>emailList</span>" name="emailList">").appendTo("#myForm");</select>
 
         for(i-0;i)
           {
@@ -111,10 +111,10 @@ src</span>="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" typ
 
       //Ajax stuff for button
       $('#showbtn').click(function(){//$('input[type=submit]', this).attr('disabled','disabled');
-        var emailAddy = 'emailAddress' + contact;
+        var dataValues = 'emailAddress' + contact;
         $.ajax({
                   type: 'GET',
-                  data: emailAddy,
+                  data: dataValues,
                   cahce: false,
                   contentType: "application/json",
                   dataType: "jsonp",
