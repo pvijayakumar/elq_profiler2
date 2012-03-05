@@ -3,7 +3,7 @@
   <ModulePrefs title="Eloqua Profiler"
     description="What's your prospect interested in?"
     height="600"
-    width="600"
+    width="800"
     author="Pras"
     author_email="prasanna.vijayakumar@eloqua.com"
     author_location="Tdot">
@@ -62,7 +62,7 @@
   <Content type="html" view="card">
   <![CDATA[ 
 
-      <iframe border="0" height="600" width="600" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
+      <iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
 
   ]]> 
   </Content>
