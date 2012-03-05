@@ -74,7 +74,7 @@ src</span>="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" typ
       
       var allemails;
 
-      < Fetch the array of content matches. >
+      <!--Fetch the array of content matches.-->
       matches = google.contentmatch.getContentMatches();
       
       for(var match in matches)
