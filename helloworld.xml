@@ -61,13 +61,9 @@
   <Content type="html" view="card">
   <![CDATA[ 
     <script type="text/javascript">
-    <div style="text-align:left" height="800"><a
-      id="EPP" title="Profiler" target="_blank">
       <iframe border="0" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
-      </a>
-    </div>
-    gadgets.window.adjustHeight(800);
-  </script>
+      gadgets.window.adjustHeight(800);
+    </script>
   ]]> 
   </Content>
 </Module>
