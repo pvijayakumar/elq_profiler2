@@ -54,7 +54,7 @@
           }
         }
         document.body.appendChild(matchList);
-        <div border="0" height:800px src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
+        <div border="0" height:800px src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">;
         gadgets.window.adjustHeight(800);
       </script>
     ]]>
