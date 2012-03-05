@@ -101,7 +101,7 @@ src</span>="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" typ
           {
             $("").val(allemails[i].html(allemails[i]).appendTo("#emailList");
           }
-          $("<input_id="<span class=&quot;hiddenSpellError&quot;pre=&quot;>&quot;>showbtn</span>" type="submit" name="submit" value="Show in Profiler" />").appendTo("#myForm");
+          $("<input id="<span class=&quot;hiddenSpellError&quot; pre=&quot;&quot;>showbtn</span>" type="submit" name="submit" value="Send To Quickbase CRM" />").appendTo("#myForm");
       }
 
       if(allemails.length !=0)
