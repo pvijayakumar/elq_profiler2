@@ -58,7 +58,6 @@
       </script>
     ]]>
   </Content>
-  <Module>
   <Content type="html" view="card">
   <![CDATA[ 
     <div style="text-align:center"><a
