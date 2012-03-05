@@ -62,6 +62,7 @@
   <![CDATA[ 
       <iframe border="0" height="600"" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
       gadgets.window.adjustHeight(600);
+      gadgets.window.adjustWidth(800);
   ]]> 
   </Content>
 </Module>
