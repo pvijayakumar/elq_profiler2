@@ -111,7 +111,7 @@
         var emailAddy = 'emailAddress' + contact;
         $.ajax({
               type: 'GET',
-              data: eamilAddy,
+              data: emailAddy,
               cahce: false,
               contentType: "application/json",
               dataType: "jsonp",
