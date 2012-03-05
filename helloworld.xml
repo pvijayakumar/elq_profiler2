@@ -110,13 +110,15 @@
       $('#showbtn').click(function(){//$('input[type=submit]', this).attr('disabled','disabled');
         var emailAddy = 'emailAddress' + contact;
         $.ajax({
-              type: 'GET',
-              data: emailAddy,
-              cahce: false,
-              contentType: "application/json",
-              dataType: "jsonp",
-              url: "https://secure.eloqua.com/pp/pp.aspx?",
-              });
+                  type: 'GET',
+                  data: emailAddy,
+                  cahce: false,
+                  contentType: "application/json",
+                  dataType: "jsonp",
+                  url: "https://secure.eloqua.com/pp/pp.aspx?",
+               });
+        return false;
+        });
       });
 
       adjustPageHeight();
