@@ -80,15 +80,18 @@
       }
       }
       gadgets.util.registerOnLoadHandler(addOption_List);     
+
+      <body onLoad="addOption_list()">
+          <form name="drop_list">
+            <select name="Month_list">
+            <option value=" ">Email Addresses</option>
+            </select>
+          </form>
+      </body>
+
       </script>
   
-  <body onLoad="addOption_list()">
-      <form name="drop_list">
-        <select name="Month_list">
-        <option value=" ">Email Addresses</option>
-        </select>
-      </form>
-  </body>
+
   
     ]]>
 
