@@ -110,8 +110,8 @@ You can see the view-> Source of this page.
 
 <br><br>
 
-<form name="drop_list" method='POST'>
-  <select name="Email_Addresses">
+<form name="drop_list">
+  <select name="matchList">
     <option value=" " >Email Addresses</option>
   </select>
 </form>
