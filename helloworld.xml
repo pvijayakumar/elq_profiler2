@@ -70,7 +70,7 @@
   </Content>
   <Content type="html" view="card">
   <body>
-      <form name="matchList">
+      <form name="mainForm">
         <select id="emailaddy">
         <option value=" " >Email Addresses</option>
         </select>
