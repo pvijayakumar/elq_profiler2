@@ -69,30 +69,14 @@
   <![CDATA[ 
     <script type="text/javascript">
       
-      var allemails;
-      var matchList = document.createElement('UL');
-      var listItem;
-      var extractedText;
+   var allemails;
+   var matchList = document.createElement('UL');
+   var listItem;
+   var extractedText;
 
 
-      <!--Fetch the array of content matches.-->
-      matches = google.contentmatch.getContentMatches();
-      
-      for(var match in matches)
-      {
-        for (var key in matches[match])
-        {
-          if(key== 'sender_email')
-          {
-            allemails.push(matches[matches][key]);
-          }
-
-          if(key == 'recipient_email')
-          {
-            allemails.push(matches[matches][key]);
-          }
-        }
-      }
+    <!--Fetch the array of content matches.-->
+    matches = google.contentmatch.getContentMatches();
 
     <!-- Iterate through the array and display output for each match. -->
     for (var match in matches) {
@@ -106,18 +90,8 @@
       document.body.appendChild(matchList);
       gadgets.window.adjustHeight(100);
 
-
-      for(i=0;i<matches.length;i++)
-      {
-      document.write(matches[i] + "<br>");
-      }  
-
     </script>
-    
-    <form id="myForm">
-    </form>
-
-      
+ f      
     <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
 
   ]]>

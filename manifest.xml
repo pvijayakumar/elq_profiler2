@@ -50,7 +50,7 @@
   <Name>Sender Email Extractor</Name>
   <Url>google.com:SenderEmailExtractor</Url>
   <Param name="sender_email" value=".*"/>
-  <Triggers ref="showProfiler" />
+  <Triggers ref="HelloWorldGadget" />
   <Scope ref="emailSender"/>
   <Container name="mail"/>
 </Extension>
