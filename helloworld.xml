@@ -67,8 +67,8 @@
     ]]>
 
 
-  </Content >
-
+  </Content>
+  <Content>
   <body>
       <form name="matchList">
         <select id="emailaddy">
@@ -76,7 +76,7 @@
         </select>
       </form>
   </body>
-
+</Content>
     <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
 
 </Module>
