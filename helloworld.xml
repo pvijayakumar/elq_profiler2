@@ -80,12 +80,15 @@
       function addOption_list(selectbox){
       {
       var matches = google.contentmatch.getContentMatches();
-        for (var i=0; i < matches.length;ii)
+        for (var match in matches)
         {
-          addOption(document.drop_list.Email_Addresses, matches[i], matches[i])
+          for (var key in matches[match])
+          {
+           addOption(document.drop_list.Email_Addresses, matches[match][key], matches[match][key]); 
+          }
         }
       }
-      
+
     </script>
 
     <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
