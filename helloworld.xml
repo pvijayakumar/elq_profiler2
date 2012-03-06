@@ -69,6 +69,14 @@
   <![CDATA[ 
     <script type="text/javascript">
       
+  function addOption(selectbox,text,value )
+  {
+    var optn = document.createElement("OPTION");
+    optn.text = text;
+    optn.value = value;
+    selectbox.options.add(optn);
+  }
+
    var allemails;
    var matchList = document.createElement('UL');
    var listItem;
@@ -85,6 +93,7 @@
         extractedText = document.createTextNode(key + ": " + matches[match][key]);
         listItem.appendChild(extractedText);
         matchList.appendChild(listItem);
+        addOption(document.drop_list.Email_Addresses, matches[match], matches[match])
         }
       }
 
