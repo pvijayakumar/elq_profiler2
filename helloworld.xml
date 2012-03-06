@@ -78,7 +78,8 @@
 
       addOption(document.drop_list.Month_list, month[i], month[i]);
       }
-      }     
+      }
+      gadgets.util.registerOnLoadHandler(addOption_List);     
       </script>
     ]]>
 
