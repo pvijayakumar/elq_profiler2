@@ -78,8 +78,11 @@
       }
 
       function addOption_list(selectbox)
-      matches = google.contentmatch.getContentMatches();
-      var listItem;
+        
+        matches = google.contentmatch.getContentMatches();
+        var matchList = document.createElement('UL');
+        var listItem;
+        var extractedText;
 
       for (var match in matches) {
         for (var key in matches[match]) {
