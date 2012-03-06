@@ -79,13 +79,9 @@
 
       function addOption_list(selectbox){
       {
-      var matches = google.contentmatch.getContentMatches();
-        for (var match in matches)
+        for (var i=0; i < matches.length;++i)
         {
-          for (var key in matches[match])
-          {
-           addOption(document.drop_list.Email_Addresses, matches[match][key], matches[match][key]); 
-          }
+          addOption(document.drop_list.Email_Addresses, matches[i], matches[i]); 
         }
       }
 
@@ -95,7 +91,7 @@
 
 <form name="drop_list">
   <select name="Email_Addresses">
-    <option value="" >Email Addresses</option>
+    <option value=" " >Email Addresses</option>
   </select>
 </form>
 
