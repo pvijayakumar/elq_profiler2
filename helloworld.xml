@@ -81,8 +81,7 @@
       }
       gadgets.util.registerOnLoadHandler(addOption_List);     
       </script>
-    ]]>
-
+  
   <body onLoad="addOption_list()">
       <form name="drop_list">
         <select name="Month_list">
@@ -90,6 +89,8 @@
         </select>
       </form>
   </body>
+  
+    ]]>
 
   </Content>
 
