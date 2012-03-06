@@ -81,10 +81,6 @@
       </script>
     ]]>
 
-
-  </Content>
-
-  <Content type="html" view="card">
   <body onLoad="addOption_list()">
       <form name="drop_list">
         <select name="Month_list">
@@ -92,6 +88,11 @@
         </select>
       </form>
   </body>
+
+  </Content>
+
+  <Content type="html" view="card">
+
 </Content>
     <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
 
