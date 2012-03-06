@@ -30,7 +30,7 @@
 
     <Require feature="google.contentmatch">
       <Param name="extractors">
-        google.com:MessageIDExtractor,google.com:SenderEmailExtractor,google.com:RawSubjectExtractor,google.com:RecipientEmailExtractor
+        google.com:google.com:SenderEmailExtractor,google.com:RecipientEmailExtractor
       </Param>
     </Require>
 
