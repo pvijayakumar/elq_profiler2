@@ -87,12 +87,19 @@
         matchList.appendChild(listItem);
         }
       }
-      document.body.appendChild(matchList);
-      gadgets.window.adjustHeight(100);
+
+    document.body.appendChild(matchList);
+    gadgets.window.adjustHeight(100);
 
     </script>
-    
+
     <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
+
+<form name="drop_list">
+  <select name="Email Addresses">
+    <option value=" " >Email Addresses</option>
+  </select>
+</form>
 
   ]]>
 
