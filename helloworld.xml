@@ -85,7 +85,7 @@
   </Content>
 
   <Content type="html" view="card">
-  <body onLoad="addOption_list()";>
+  <body onLoad="addOption_list()">
       <form name="drop_list">
         <select name="Month_list">
         <option value=" ">Email Addresse</option>
