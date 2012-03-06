@@ -64,12 +64,9 @@
       </script>
     ]]>
   </Content -->
+  
   <Content type="html" view="card">
- <!--[<span class="hiddenSpellError" pre=""-->CDATA[
-<script type="text/javascript">// <![CDATA[
-src</span>="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
-// ]]></script>
-
+  <![CDATA[ 
     <script type="text/javascript">
       
       var allemails;
@@ -93,11 +90,10 @@ src</span>="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" typ
         }
       }
 
-      for(i=0;i<allemails.length;i++)
+      for(i=0;i<matches.length;i++)
       {
-      document.write(allemails[i] + "<br>");
+      document.write(matches[i] + "<br>");
       }  
-      if(allemails.length > 0)
 
     </script>
     
