@@ -68,7 +68,7 @@
 
 
   </Content>
-  <Content>
+  <Content type="html" view="card">
   <body>
       <form name="matchList">
         <select id="emailaddy">
