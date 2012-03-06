@@ -60,7 +60,7 @@
           }
         }
         document.body.appendChild(matchList);
-        document.getElementById("emailaddy");
+        //document.getElementById("emailaddy");
         gadgets.window.adjustHeight(100);
       
       </script>
@@ -68,11 +68,12 @@
 
 
   </Content>
+
   <Content type="html" view="card">
   <body>
       <form name="mainForm">
-        <select id="emailaddy">
-        <option value=" " >Email Addresse</option>
+        <Select name="bob">
+        <Option value=" " >Email Addresse</option>
         </select>
       </form>
   </body>
