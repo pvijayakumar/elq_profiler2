@@ -73,6 +73,7 @@
 
       function addOption_list(selectbox){
       var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+      alert('Hi Pras');
       for (var i=0; i < month.length;++i){
 
       addOption(document.drop_list.Month_list, month[i], month[i]);
@@ -84,7 +85,7 @@
   <body onLoad="addOption_list()">
       <form name="drop_list">
         <select name="Month_list">
-        <option value=" ">Email Addresse</option>
+        <option value=" ">Email Addresses</option>
         </select>
       </form>
   </body>
