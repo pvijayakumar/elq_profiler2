@@ -60,7 +60,7 @@
           }
         }
         document.body.appendChild(matchList);
-        document.getElementById(emailaddy);
+        document.getElementById("emailaddy");
         gadgets.window.adjustHeight(100);
       
       </script>
