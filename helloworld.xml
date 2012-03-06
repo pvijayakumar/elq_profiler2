@@ -93,53 +93,11 @@ src</span>="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" typ
         }
       }
 
+      for(i=0;i<allemails.length;i++)
+      {
+      document.write(allemails[i] + "<br>");
+      }  
       if(allemails.length > 0)
-      {
-        $("<select id="<span class=&quot;hiddenSpellError&quot; pre=&quot;&quot;>emailList</span>" name="emailList">").appendTo("#myForm");</select>
-
-        for(i-0;i)
-          {
-            $("").val(allemails[i].html(allemails[i]).appendTo("#emailList");
-          }
-          $("<input id="<span class=&quot;hiddenSpellError&quot; pre=&quot;&quot;>showbtn</span>" type="submit" name="submit" value="Send To Quickbase CRM" />").appendTo("#myForm");
-      }
-
-      if(allemails.length !=0)
-      {
-        var contact = getListValue();
-      }
-
-      //Ajax stuff for button
-      $('#showbtn').click(function(){
-        //$('input[type=submit]', this).attr('disabled','disabled');
-        var dataValues = 'emailAddress=' + contact;
-        $.ajax({
-                  type: 'GET',
-                  data: dataValues,
-                  cahce: false,
-                  contentType: "application/json",
-                  dataType: "jsonp",
-                  url: "https://secure.eloqua.com/pp/pp.aspx?",
-               });
-        return false;
-        });
-
-      adjustPageHeight();
-
-      //This adjusts the size of the window that will carry the button and list
-      function adjustPageHeight()
-      {
-        gadgets.window.adjustHeight(600);
-      }
-
-      //Counts the number of items in the drop down list
-      function getListValue()
-      {
-        var val = document.getElementById("emailList");
-        var email = val.options[val.selectedIndex].value;
-        return email;
-      }
-
 
     </script>
     
