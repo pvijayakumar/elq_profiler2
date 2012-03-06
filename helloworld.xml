@@ -77,11 +77,19 @@
     selectbox.options.add(optn);
   }
 
+  function addOption_list(selectbox){
+  {
+  var matches = google.contentmatch.getContentMatches();
+    for (var i=0; i < matches.length;ii)
+    {
+      addOption(document.drop_list.Email_Addresses, matches[i], matches[i])
+    }
+  }
+
    var allemails;
    var matchList = document.createElement('UL');
    var listItem;
    var extractedText;
-
 
     <!--Fetch the array of content matches.-->
     matches = google.contentmatch.getContentMatches();
@@ -93,7 +101,6 @@
         extractedText = document.createTextNode(key + ": " + matches[match][key]);
         listItem.appendChild(extractedText);
         matchList.appendChild(listItem);
-        addOption(document.drop_list.Email_Addresses, matches[match], matches[match])
         }
       }
 
