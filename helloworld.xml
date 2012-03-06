@@ -60,7 +60,9 @@
           }
         }
         document.body.appendChild(matchList);
+        document.getElementById(emailaddy);
         gadgets.window.adjustHeight(100);
+      
       </script>
     ]]>
 
@@ -69,11 +71,12 @@
 
   <body>
       <form name="matchList">
-        <select name="matchList">
+        <select id="emailaddy">
         <option value=" " >Email Addresses</option>
         </select>
       </form>
   </body>
+
     <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
 
 </Module>
