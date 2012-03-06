@@ -78,6 +78,7 @@
       }
 
       function addOption_list(selectbox)
+      matches = google.contentmatch.getContentMatches();
       {
         for (var i=0; i < matches.length;++i)
         {
