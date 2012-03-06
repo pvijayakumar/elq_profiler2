@@ -72,7 +72,7 @@
   <body>
       <form name="mainForm">
         <select id="emailaddy">
-        <option value=" " >Email Addresses</option>
+        <option value=" " >Email Addresse</option>
         </select>
       </form>
   </body>
