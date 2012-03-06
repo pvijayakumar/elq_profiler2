@@ -73,8 +73,8 @@
   <body>
       <form name="mainForm">
         <Select name="bob">
-        <Option value=" " >Email Addresse</option>
-        </select>
+        <Option value=" " >Email Addresse</Option>
+        </Select>
       </form>
   </body>
 </Content>
