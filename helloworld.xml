@@ -92,10 +92,13 @@
           listItem.appendChild(extractedText);
           matchList.appendChild(listItem);
         }
+      
+      document.body.appendChild(matchList);
+      gadgets.window.adjustHeight(100);
+
       }
     
-    document.body.appendChild(matchList);
-    gadgets.window.adjustHeight(100);
+
     
     </script>
 
