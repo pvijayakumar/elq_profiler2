@@ -79,6 +79,7 @@
 
       function addOption_list(selectbox)
       matches = google.contentmatch.getContentMatches();
+      var listItem;
       {
         for (var i=0; i < matches.length;++i)
         {
@@ -90,11 +91,17 @@
 
     <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
 
+<body onLoad="addOption_list()";>
+You can see the view-> Source of this page. 
+<br><br>
+
 <form name="drop_list" method='POST'>
   <select name="Email_Addresses">
     <option value=" " >Email Addresses</option>
   </select>
 </form>
+
+</body>
 
   ]]>
 
