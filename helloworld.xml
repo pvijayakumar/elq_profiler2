@@ -80,11 +80,14 @@
       function addOption_list(selectbox)
       matches = google.contentmatch.getContentMatches();
       var listItem;
-      document.write(matches.length);
-      {
-        for (var i=0; i < matches.length;++i)
-        {
-          addOption(document.drop_list.Email_Addresses, matches[i], matches[i]); 
+
+      for (var match in matches) {
+        for (var key in matches[match]) {
+          addOption(document.drop_list.Email_Addresses, matches[key], matches[key]);
+          listItem = document.createElement('LI');
+          extractedText = document.createTextNode(key + "> " + matches[match][key]);
+          listItem.appendChild(extractedText);
+          matchList.appendChild(listItem);
         }
       }
 
