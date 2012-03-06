@@ -62,7 +62,22 @@
         document.body.appendChild(matchList);
         //document.getElementById("emailaddy");
         gadgets.window.adjustHeight(100);
-      
+
+      function addOption(selectbox,text,value )
+      {
+        var optn = document.createElement("OPTION");
+        optn.text = text;
+        optn.value = value;
+        selectbox.options.add(optn);
+      }
+
+      function addOption_list(selectbox){
+      var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+      for (var i=0; i < month.length;++i){
+
+      addOption(document.drop_list.Month_list, month[i], month[i]);
+      }
+      }     
       </script>
     ]]>
 
@@ -70,10 +85,10 @@
   </Content>
 
   <Content type="html" view="card">
-  <body>
-      <form name="mainForm">
-        <Select name="bob">
-        <Option value=" ">Email Addresse</Option>
+  <body onLoad="addOption_list()";>
+      <form name="drop_list">
+        <select name="Month_list">
+        <option value=" ">Email Addresse</option>
         </select>
       </form>
   </body>
