@@ -77,7 +77,7 @@
         selectbox.options.add(optn);
       }
 
-      function addOption_list(selectbox){
+      function addOption_list(selectbox)
       {
         for (var i=0; i < matches.length;++i)
         {
@@ -89,7 +89,7 @@
 
     <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
 
-<form name="drop_list">
+<form name="drop_list" method='POST'>
   <select name="Email_Addresses">
     <option value=" " >Email Addresses</option>
   </select>
