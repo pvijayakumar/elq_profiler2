@@ -55,7 +55,7 @@
           }
         }
         document.body.appendChild(matchList);
-        gadgets.window.adjustHeight(100);
+        gadgets.window.adjustHeight(600);
       
       function addOption(selectbox,text,value )
       {
@@ -66,10 +66,10 @@
       }
 
       function addOption_list(selectbox){
-      var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-      for (var i=0; i < month.length;++i){
+      //var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+      for (var i=0; i < matches.length;++i){
 
-      addOption(document.drop_list.Month_list, month[i], month[i]);
+      addOption(document.drop_list.Month_list, matches[i], matches[i]);
       }
       }
 
