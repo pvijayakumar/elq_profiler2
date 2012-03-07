@@ -70,7 +70,7 @@
         }
 
       function show_email(){
-        alert(document.getElementById("e1").value);
+        alert(document.getElementById("e1").text);
         return true;
         }
 
