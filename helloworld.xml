@@ -61,11 +61,11 @@
             listItem = document.createElement('LI');
             extractedText = document.createTextNode(key + ": " + matches[match][key]);          
             addOption(document.drop_list.email_list, matches[match][key]);
-            listItem.appendChild(extractedText);
-            matchList.appendChild(listItem);
+            //listItem.appendChild(extractedText);
+            //matchList.appendChild(listItem);
           }
         }
-        document.body.appendChild(matchList);
+        //document.body.appendChild(matchList);
         gadgets.window.adjustHeight(600);
         }
 
