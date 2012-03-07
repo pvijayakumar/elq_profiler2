@@ -7,6 +7,33 @@
         <Optional feature="maximize"/> 
   </ModulePrefs> 
   
+  <Extension id="RecipientEmailExtractor" type="contextExtractor">
+    <Name>Recipient email extractor</Name>
+    <Url>google.com:RecipientEmailExtractor</Url>
+    <Param name="recipient_email" value=".*"/>
+    <Triggers ref="HelloWorldGadget"/>
+    <Scope ref="emailtoAddress"/>
+    <Scope ref="emailCC"/>
+    <Container name="mail"/>
+  </Extension>
+
+  <Extension id="SenderEmailExtractor" type="contextExtractor">
+    <Name>Sender Email Extractor</Name>
+    <Url>google.com:SenderEmailExtractor</Url>
+    <Param name="sender_email" value=".*"/>
+    <Triggers ref="HelloWorldGadget" />
+    <Scope ref="emailSender"/>
+    <Container name="mail"/>
+  </Extension>
+
+  <Extension id="HelloWorldGadget" type="gadget">
+    <Name>Eloqua Profiler</Name>
+    <Url>https://raw.github.com/pvijayakumar/elq_profiler2/master/helloworld.xml</Url>
+    <Container name="mail"/>
+    <!-- Uncomment this to enable Caja. -->
+    <!-- <Param name="caja" value="enabled"/> -->
+  </Extension>
+
   <Content type="html">
   <![CDATA[
     <!-- Start with Single Sign-On -->
