@@ -92,7 +92,6 @@
           <SELECT  id="e1" name="email_list" onChange="displayEP()">
             <Option value=" " >Prospects</option>
           </SELECT>
-        <a href="javascript:void(0)" onClick="alert("shtye1")" target="_self">Hide Profiler</href>
         </form>
         <iframe id="epf" border="0" height="650" width="750" marginwidth="0" marginheight="0" frameborder="no" src=" " >
         </iframe>
