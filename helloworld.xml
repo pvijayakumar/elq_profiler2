@@ -75,8 +75,8 @@
       }
 
       function hideEP() {   
+       addOption_list();
        gadgets.window.adjustHeight(50);
-       gadgets.util.registerOnLoadHandler(addOption_list);
       }
 
 
