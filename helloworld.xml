@@ -27,7 +27,7 @@
 
   <!-- Define the content type and display location. The settings
    "html" and "card" are required for all Gmail contextual gadgets. -->
-  <Content type="html" view="card">
+  <Content type="html" view="card" scrolling="no">
     <![CDATA[
       <!-- Start with Single Sign-On -->
       <script type="text/javascript" src="http://example.com/gadgets/sso.js"></script>
