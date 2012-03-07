@@ -77,7 +77,7 @@
       function displayEP() {   
        var EPurl = "https://secure.eloqua.com/pp/pp.aspx?emailAddress=";
        document.getElementById("epf").src=EPurl&document.getElementById("e1").value;
-       alert(EPurl&document.getElementById("e1").value);
+       alert(EPurl+document.getElementById("e1").value);
       }
 
       gadgets.util.registerOnLoadHandler(addOption_list); 
