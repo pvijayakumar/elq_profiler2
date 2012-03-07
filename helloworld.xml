@@ -63,6 +63,14 @@
         href="http://picasaweb.google.com/doc.examples/ShelfBoy">
         <img border="0" alt="Photo" src="http://doc.examples.googlepages.com/Riggsie-OP.jpg" 
         title="Click Here."></a>
+
+        <select>
+          <option>Volvo</option>
+          <option>Saab</option>
+          <option>Mercedes</option>
+          <option>Audi</option>
+        </select>
+    
       </div>
 
     ]]>
