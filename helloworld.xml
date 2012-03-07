@@ -42,7 +42,7 @@
     <![CDATA[
       <!-- Start with Single Sign-On -->
       <script type="text/javascript" src="http://example.com/gadgets/sso.js"></script>
-      <script type="text/javascript">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js" type="text/javascript">
 
         <!-- Fetch the array of content matches. -->
         matches = google.contentmatch.getContentMatches();
@@ -81,8 +81,6 @@
       }
       gadgets.util.registerOnLoadHandler(addOption_List);     
 
-      <body onLoad="addOption_list()">
-          <form name="drop_list">
             <select name="Month_list">
             <option value=" ">Email Addresses</option>
             </select>
@@ -100,6 +98,6 @@
   <Content type="html" view="card">
 
 </Content>
-    <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
+    <iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=">
 
 </Module>
