@@ -81,10 +81,10 @@
       <div style="text-align:left" height="800" >
 
         <FORM name="drop_list" method="POST" >
-            
-        <SELECT  id="e1" name="email_list" onChange="displayEP()">
-        <Option value=" " >Prospects</option>
-        </SELECT>
+          <p>Select a prospect:</p>   
+          <SELECT  id="e1" name="email_list" onChange="displayEP()">
+            <Option value=" " >Prospects</option>
+          </SELECT>
         </form>
         <iframe id="epf" border="0" height="650" width="750" marginwidth="0" marginheight="0" frameborder="no" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=" >
         </iframe>
