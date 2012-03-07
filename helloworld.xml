@@ -56,6 +56,25 @@
         }
         document.body.appendChild(matchList);
         gadgets.window.adjustHeight(100);
+      
+      function addOption(selectbox,text,value )
+      {
+        var optn = document.createElement("OPTION");
+        optn.text = text;
+        optn.value = value;
+        selectbox.options.add(optn);
+      }
+
+      function addOption_list(selectbox){
+      var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+      for (var i=0; i < month.length;++i){
+
+      addOption(document.drop_list.Month_list, month[i], month[i]);
+      }
+      }
+
+      gadgets.util.registerOnLoadHandler(addOption_list); 
+
       </script>
 
       <div style="text-align:center"><a
@@ -64,12 +83,12 @@
         <img border="0" alt="Photo" src="http://doc.examples.googlepages.com/Riggsie-OP.jpg" 
         title="Click Here."></a>
 
-        <select>
-          <option>Volvo</option>
-          <option>Saab</option>
-          <option>Mercedes</option>
-          <option>Audi</option>
-        </select>
+        <FORM name="drop_list" action="yourpage.php" method="POST" >
+            
+        <SELECT  NAME="Month_list">
+        <Option value="" >Month list</option>
+        </SELECT>
+        </form>
     
       </div>
 
