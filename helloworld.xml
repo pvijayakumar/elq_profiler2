@@ -82,7 +82,7 @@
       <div style="text-align:left" height="800" >
 
         <FORM name="drop_list" method="POST" >
-          <small> </small>
+          <small stype="text-alight:right" >Hide Profiler</small>
           <small>Select a prospect:</small>   
           <SELECT  id="e1" name="email_list" onChange="displayEP()">
             <Option value=" " >Prospects</option>
