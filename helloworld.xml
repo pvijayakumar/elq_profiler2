@@ -76,7 +76,8 @@
 
       function hideEP() {   
        gadgets.window.adjustHeight(50);
-       addOption_list(selectbox);
+       alert('Shyte');
+       addOption_list.;
       }
 
 
