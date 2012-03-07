@@ -2,7 +2,7 @@
 <Module>
   <ModulePrefs title="Eloqua Profiler"
     description="What's your prospect interested in?"
-    height="50"
+    height="30"
     author="Pras"
     author_email="prasanna.vijayakumar@eloqua.com"
     author_location="Tdot">
