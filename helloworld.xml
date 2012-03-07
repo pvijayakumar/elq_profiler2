@@ -39,11 +39,11 @@
       <script type="text/javascript" src="http://example.com/gadgets/sso.js"></script>
       <script type="text/javascript">
 
-        function addOption(selectbox,value )
+        function addOption(selectbox,text )
         {
           var optn = document.createElement("OPTION");
-          //optn.text = text;
-          optn.value = value;
+          optn.text = text;
+          //optn.value = value;
           selectbox.options.add(optn);
         }
 
