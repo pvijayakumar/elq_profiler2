@@ -66,7 +66,7 @@
           }
         }
         //document.body.appendChild(matchList);
-        gadgets.window.adjustHeight(600);
+        //gadgets.window.adjustHeight(600);
         }
 
       function show_email(){
