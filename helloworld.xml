@@ -10,18 +10,12 @@
     <!-- Declare feature dependencies. -->
 
     <!-- This one is not specific to Gmail contextual gadgets. -->
-    <Require feature="dynamic-height"/>
+    <!--Require feature="dynamic-height"/-->
 
     <!-- The next feature, Caja, is optional, and is supported for
      use only within test domains. Uncomment the tag only for
      non-production gadgets. -->
     <!-- <Require feature="caja"/> -->
-
-    <!-- The next feature, google.contentmatch, is required for all
-     Gmail contextual gadgets.
-     <Param> - specify one or more comma-separated extractor IDs in
-     a param named "extractors". This line is overridden by the extractor ID
-     in the manifest, but is still expected to be present. -->
 
     <Require feature="google.contentmatch">
       <Param name="extractors">
@@ -66,7 +60,6 @@
           }
         }
         //document.body.appendChild(matchList);
-        //gadgets.window.adjustHeight(600);
         }
 
       function show_email(){
@@ -77,11 +70,12 @@
       function displayEP() {   
        var EPurl = "https://secure.eloqua.com/pp/pp.aspx?emailAddress=";
        document.getElementById("epf").src=EPurl+document.getElementById("e1").value;
-       alert(EPurl+document.getElementById("e1").value);
+       //alert(EPurl+document.getElementById("e1").value);
       }
 
       gadgets.util.registerOnLoadHandler(addOption_list); 
-
+      gadgets.window.adjustHeight(600);
+       
       </script>
 
       <div style="text-align:left">
