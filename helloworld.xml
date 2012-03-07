@@ -75,8 +75,8 @@
       }
 
       function hideEP() {   
-       addOption_list();
        gadgets.window.adjustHeight(50);
+       addOption_list(selectbox);
       }
 
 
