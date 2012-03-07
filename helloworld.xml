@@ -81,6 +81,7 @@
       }
       gadgets.util.registerOnLoadHandler(addOption_List);     
 
+     <body>
             <select name="Month_list">
             <option value=" ">Email Addresses</option>
             </select>
