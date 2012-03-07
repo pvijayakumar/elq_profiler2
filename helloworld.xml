@@ -2,7 +2,7 @@
 <Module>
   <ModulePrefs title="Eloqua Profiler"
     description="What's your prospect interested in?"
-    height="70"
+    height="100"
     author="Pras"
     author_email="prasanna.vijayakumar@eloqua.com"
     author_location="Tdot">
@@ -10,7 +10,7 @@
     <!-- Declare feature dependencies. -->
 
     <!-- This one is not specific to Gmail contextual gadgets. -->
-    <Require feature="dynamic-height"/>
+    <Require feature="dynamic-height" />
 
     <!-- The next feature, Caja, is optional, and is supported for
      use only within test domains. Uncomment the tag only for
