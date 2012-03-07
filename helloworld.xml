@@ -54,7 +54,7 @@
             listItem = document.createElement('LI');
             extractedText = document.createTextNode(key + ": " + matches[match][key]);          
             addOption(document.drop_list.email_list, matches[match][key]);
-            alert(matches[match][key]);
+            //alert(matches[match][key]);
             //listItem.appendChild(extractedText);
             //matchList.appendChild(listItem);
           }
@@ -75,8 +75,8 @@
       }
 
       function hideEP() {   
-       gadgets.util.registerOnLoadHandler(addOption_list);
-       //gadgets.window.adjustHeight(50);
+       //gadgets.util.registerOnLoadHandler(addOption_list);
+       gadgets.window.adjustHeight(50);
        //addOption_list(drop_list);
        alert('shyte');
       }
