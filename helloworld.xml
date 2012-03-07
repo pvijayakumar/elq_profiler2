@@ -83,7 +83,7 @@
         <FORM name="drop_list" method="POST" >
             
         <SELECT  NAME="Month_list">
-        <Option value="" >Month list</option>
+        <Option value="" >Prospects</option>
         </SELECT>
         </form>
     
