@@ -75,8 +75,9 @@
       }
 
       function hideEP() {   
-       gadgets.window.adjustHeight(50);
-       addOption_list(drop_list);
+       gadgets.util.registerOnLoadHandler(addOption_list);
+       //gadgets.window.adjustHeight(50);
+       //addOption_list(drop_list);
        alert('shyte');
       }
 
@@ -93,7 +94,7 @@
           <SELECT  id="e1" name="email_list" onChange="displayEP()">
             <Option value=" " >Prospects</option>
           </SELECT>
-        <a href onClick="window.location.reload()">Hide Profiler</href>
+        <a href onClick="hideEP">Hide Profiler</href>
         </form>
         <iframe id="epf" border="0" height="650" width="750" marginwidth="0" marginheight="0" frameborder="no" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=" >
         </iframe>
