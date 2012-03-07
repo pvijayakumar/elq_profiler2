@@ -94,7 +94,7 @@
           </SELECT>
         <a href="javascript:void(0)" onClick="gadgets.window.adjustHeight(30)" target="_self">Hide Profiler</href>
         </form>
-        <iframe id="epf" border="0" height="650" width="750" marginwidth="0" marginheight="0" frameborder="no" src=" " >
+        <iframe id="epf" border="0" height="650" width="750" marginwidth="0" marginheight="0" frameborder="no" src=" " scrolling="no">
         </iframe>
       </div>
 
