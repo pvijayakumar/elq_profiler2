@@ -35,7 +35,6 @@
    "html" and "card" are required for all Gmail contextual gadgets. -->
   <Content type="html" view="card">
     <![CDATA[
-      <div id="content_div"></div>
       <!-- Start with Single Sign-On -->
       <script type="text/javascript" src="http://example.com/gadgets/sso.js"></script>
       <script type="text/javascript">
@@ -57,8 +56,8 @@
         }
         document.body.appendChild(matchList);
         gadgets.window.adjustHeight(100);
-      <!--form>
-      </form-->
+      <form>
+      </form>
       </script>
     ]]>
   </Content>
