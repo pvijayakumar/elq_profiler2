@@ -74,7 +74,7 @@
       }
       }
 
-      gadgets.util.registerOnLoadHandler(addOptio_list);
+      gadgets.util.registerOnLoadHandler(addOption_list);
 
       <FORM name="drop_list" method="POST" > 
       <SELECT  NAME="Month_list">
