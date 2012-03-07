@@ -7,7 +7,7 @@
         <Optional feature="maximize"/> 
   </ModulePrefs> 
   
-  <Content type="html" view="card">
+  <Content type="html">
   <![CDATA[
     <!-- Start with Single Sign-On -->
     <script type="text/javascript" src="http://example.com/gadgets/sso.js"></script>
