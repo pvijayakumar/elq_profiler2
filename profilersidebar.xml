@@ -6,17 +6,84 @@
         <Require feature="settitle"/> 
         <Optional feature="maximize"/> 
   </ModulePrefs> 
-  <Content type="html"> 
-  <![CDATA[ 
-  <div>Hello world Home</div> 
-  <script type="text/javascript"> 
-    function goToView(dest) { 
-      var supported_views = gadgets.views.getSupportedViews(); 
-      gadgets.views.requestNavigateTo(supported_views[dest]); 
-      gadgets.views.adjustHeight(500); 
-            }; 
-  </script> 
-      ]]> 
-  </Content> 
+  
+  <Content type="html" view="card">
+  <![CDATA[
+    <!-- Start with Single Sign-On -->
+    <script type="text/javascript" src="http://example.com/gadgets/sso.js"></script>
+    <script type="text/javascript">
+
+      function addOption(selectbox,text )
+      {
+        var optn = document.createElement("OPTION");
+        optn.text = text;
+        selectbox.options.add(optn);
+      }
+
+      <!-- Fetch the array of content matches. -->
+      function addOption_list(selectbox){
+
+      matches = google.contentmatch.getContentMatches();
+      var matchList = document.createElement('UL');
+      var listItem;
+      var extractedText;
+
+      <!-- Iterate through the array and display output for each match. -->
+      for (var match in matches) {
+        for (var key in matches[match]) {
+          listItem = document.createElement('LI');
+          extractedText = document.createTextNode(key + ": " + matches[match][key]);          
+          addOption(document.drop_list.email_list, matches[match][key]);
+          //alert(matches[match][key]);
+          //listItem.appendChild(extractedText);
+          //matchList.appendChild(listItem);
+        }
+      }
+      //document.body.appendChild(matchList);
+      }
+
+    function show_email(){
+      alert(document.getElementById("e1").value);
+      return true;
+      }
+
+    function displayEP() {   
+     var EPurl = "https://secure.eloqua.com/pp/pp.aspx?emailAddress=";
+     gadgets.window.adjustHeight(800);
+     document.getElementById("epf").src=EPurl+document.getElementById("e1").value;
+     //alert(EPurl+document.getElementById("e1").value);
+    }
+
+    function hideEP() {   
+      gadgets.window.adjustHeight(50);
+      alert('shyte');
+    }
+
+
+    gadgets.util.registerOnLoadHandler(addOption_list); 
+    //gadgets.window.adjustHeight(600);
+
+    </script>
+
+    <div style="text-align:left" height="800" >
+
+      <FORM name="drop_list" method="POST" >
+        <small>Select a prospect:</small>   
+        <SELECT  id="e1" name="email_list" onChange="displayEP()">
+          <Option value=" " >Prospects</option>
+        </SELECT>
+      <a href="javascript:void(0)" onClick="gadgets.window.adjustHeight(45)" target="_self">Hide Profiler</href>
+      </form>
+      <iframe id="epf" border="0" height="650" width="750" marginwidth="0" marginheight="0" frameborder="no" src=" " >
+      </iframe>
+    </div>
+
+    <script>
+
+    </script>
+
+  ]]>
+</Content>
+
 
 </Module>
