@@ -76,7 +76,7 @@
 
       function displayEP() {   
        var EPurl = "https://secure.eloqua.com/pp/pp.aspx?emailAddress=";
-       document.getElementById("epf").src=EPurl&document.getElementById("e1").value;
+       document.getElementById("epf").src=EPurl+document.getElementById("e1").value;
        alert(EPurl+document.getElementById("e1").value);
       }
 
@@ -99,6 +99,10 @@
         <iframe id="epf" border="0" height="650" width="750" marginwidth="0" marginheight="0" frameborder="no" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=" >
         </iframe>
       </div>
+
+      <script>
+
+      </script>
 
     ]]>
   </Content>
