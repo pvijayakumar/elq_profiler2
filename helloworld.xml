@@ -57,8 +57,8 @@
         }
         document.body.appendChild(matchList);
         gadgets.window.adjustHeight(100);
-        document.getElementById("selectid")
-
+        document.getElementById("email_list")
+        <select id="email_list"></select>
       </script>
     ]]>
   </Content>
