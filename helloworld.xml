@@ -37,7 +37,7 @@
     <![CDATA[
       <!-- Start with Single Sign-On -->
       <script type="text/javascript" src="http://example.com/gadgets/sso.js"></script>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js" type="text/javascript">
+      <script type="text/javascript">
 
         <!-- Fetch the array of content matches. -->
         matches = google.contentmatch.getContentMatches();
