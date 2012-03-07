@@ -2,7 +2,7 @@
 <Module>
   <ModulePrefs title="Eloqua Profiler"
     description="What's your prospect interested in?"
-    height="100"
+    height="50"
     author="Pras"
     author_email="prasanna.vijayakumar@eloqua.com"
     author_location="Tdot">
@@ -10,7 +10,7 @@
     <!-- Declare feature dependencies. -->
 
     <!-- This one is not specific to Gmail contextual gadgets. -->
-    <!--Require feature="dynamic-height"/-->
+    <Require feature="dynamic-height"/>
 
     <!-- The next feature, Caja, is optional, and is supported for
      use only within test domains. Uncomment the tag only for
@@ -70,11 +70,12 @@
       function displayEP() {   
        var EPurl = "https://secure.eloqua.com/pp/pp.aspx?emailAddress=";
        document.getElementById("epf").src=EPurl+document.getElementById("e1").value;
+       gadgets.window.adjustHeight();
        //alert(EPurl+document.getElementById("e1").value);
       }
 
       gadgets.util.registerOnLoadHandler(addOption_list); 
-      //gadgets.window.adjustHeight(600);
+      
 
       </script>
 
