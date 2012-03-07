@@ -56,12 +56,7 @@
         }
         document.body.appendChild(matchList);
         gadgets.window.adjustHeight(100);
-      <body>
-      <form>
-      <select>
-      </select>
-      </form>  
-      </body>
+
       </script>
     ]]>
   </Content>
