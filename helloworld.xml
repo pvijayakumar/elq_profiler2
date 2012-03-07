@@ -60,7 +60,7 @@
           for (var key in matches[match]) {
             listItem = document.createElement('LI');
             extractedText = document.createTextNode(key + ": " + matches[match][key]);          
-            addOption(document.drop_list.Month_list, key, match);
+            addOption(document.drop_list.Month_list, matches[match][key], key);
             listItem.appendChild(extractedText);
             matchList.appendChild(listItem);
           }
@@ -80,7 +80,7 @@
         <img border="0" alt="Photo" src="http://doc.examples.googlepages.com/Riggsie-OP.jpg" 
         title="Click Here."></a>
 
-        <FORM name="drop_list" action="yourpage.php" method="POST" >
+        <FORM name="drop_list" method="POST" >
             
         <SELECT  NAME="Month_list">
         <Option value="" >Month list</option>
