@@ -49,22 +49,14 @@
         for (var match in matches) {
           for (var key in matches[match]) {
             listItem = document.createElement('LI');
-            extractedText = document.createTextNode(key + "> " + matches[match][key]);
+            extractedText = document.createTextNode(key + ": " + matches[match][key]);
             listItem.appendChild(extractedText);
             matchList.appendChild(listItem);
           }
         }
         document.body.appendChild(matchList);
-        //document.getElementById("emailaddy");
         gadgets.window.adjustHeight(100);
-
       </script>
-  
-  
     ]]>
-    <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
-
   </Content>
-
-
 </Module>
