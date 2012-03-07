@@ -86,15 +86,12 @@
           <SELECT  id="e1" name="email_list" onChange="displayEP()">
             <Option value=" " >Prospects</option>
           </SELECT>
+        <small>Hide Profiler</small>
         </form>
         <iframe id="epf" border="0" height="650" width="750" marginwidth="0" marginheight="0" frameborder="no" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress=" >
         </iframe>
       </div>
 
-      <div style="text-align:right" >
-        <small>Hide Profiler</small>
-      </div>
-      
       <script>
 
       </script>
