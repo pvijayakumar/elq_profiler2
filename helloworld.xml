@@ -22,11 +22,6 @@
      <Param> - specify one or more comma-separated extractor IDs in
      a param named "extractors". This line is overridden by the extractor ID
      in the manifest, but is still expected to be present. -->
-    <!--Require feature="google.contentmatch">
-      <Param name="extractors">
-        google.com:HelloWorld
-      </Param>
-    </Require-->
 
     <Require feature="google.contentmatch">
       <Param name="extractors">
@@ -63,34 +58,8 @@
         //document.getElementById("emailaddy");
         gadgets.window.adjustHeight(100);
 
-      function addOption(selectbox,text,value )
-      {
-        var optn = document.createElement("OPTION");
-        optn.text = text;
-        optn.value = value;
-        selectbox.options.add(optn);
-      }
-
-      function addOption_list(selectbox){
-      var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-      alert('Hi Pras');
-      for (var i=0; i < month.length;++i){
-
-      addOption(document.drop_list.Month_list, month[i], month[i]);
-      }
-      }
-      gadgets.util.registerOnLoadHandler(addOption_List);     
-
-     <body>
-            <select name="Month_list">
-            <option value=" ">Email Addresses</option>
-            </select>
-          </form>
-      </body>
-
       </script>
   
-
   
     ]]>
     <!--iframe border="0" height="600" width="800" src="https://secure.eloqua.com/pp/pp.aspx?emailAddress="-->
