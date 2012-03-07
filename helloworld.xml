@@ -75,10 +75,9 @@
       }
 
       function hideEP() {   
+        alert('shyte');
+        gadgets.window.adjustHeight(50);
 
-       gadgets.window.adjustHeight(50);
-
-       alert('shyte');
       }
 
 
