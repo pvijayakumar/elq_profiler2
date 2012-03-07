@@ -57,7 +57,6 @@
         }
         document.body.appendChild(matchList);
         gadgets.window.adjustHeight(100);
-        document.getElementById("email_list")
       <form>
       </form>
       </script>
