@@ -35,6 +35,7 @@
    "html" and "card" are required for all Gmail contextual gadgets. -->
   <Content type="html" view="card">
     <![CDATA[
+      <div id="content_div"></div>
       <!-- Start with Single Sign-On -->
       <script type="text/javascript" src="http://example.com/gadgets/sso.js"></script>
       <script type="text/javascript">
@@ -75,13 +76,11 @@
 
       gadgets.util.registerOnLoadHandler(addOptio_list);
 
-      <FORM name="drop_list" method="POST" >
-          
+      <FORM name="drop_list" method="POST" > 
       <SELECT  NAME="Month_list">
       <Option value="" >Month list</option>
       </SELECT>
       </form>
-
 
       </script>
     ]]>
