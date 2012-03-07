@@ -16,7 +16,6 @@
       gadgets.views.adjustHeight(500); 
             }; 
   </script> 
-  <a href="javascript:goToView('canvas')" >Go to full screen view</a><br><br> 
       ]]> 
   </Content> 
 
