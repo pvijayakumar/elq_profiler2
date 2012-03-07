@@ -37,7 +37,6 @@
         {
           var optn = document.createElement("OPTION");
           optn.text = text;
-          //optn.value = value;
           selectbox.options.add(optn);
         }
 
@@ -55,6 +54,7 @@
             listItem = document.createElement('LI');
             extractedText = document.createTextNode(key + ": " + matches[match][key]);          
             addOption(document.drop_list.email_list, matches[match][key]);
+            alert(matches[match][key]);
             //listItem.appendChild(extractedText);
             //matchList.appendChild(listItem);
           }
