@@ -81,8 +81,7 @@
       <div style="text-align:left" height="800" >
 
         <FORM name="drop_list" method="POST" >
-          <br></br>
-          <p>Select a prospect:</p>   
+          <small>Select a prospect:</small>   
           <SELECT  id="e1" name="email_list" onChange="displayEP()">
             <Option value=" " >Prospects</option>
           </SELECT>
